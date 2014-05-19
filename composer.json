@@ -1,6 +1,7 @@
 {
     "name": "deweller/mongomodel",
-    "description": "Simple MongoDB Models",
+    "description": "A simple, lightweight and useful framework for mapping MongoDB documents and PHP models",
+    "keywords": ["mongo","mongodb","model","orm"],
     "type": "library",
     "license": "MIT",
     "authors": [
