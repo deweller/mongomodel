@@ -11,7 +11,9 @@ use \Exception;
 class SerialUtil
 {
 
+    // milliseconds from epoch and unique 6 digit string
     public static function newSerial() {
-        return (string)floor(microtime(true) * 1000000) . "-" . substr(md5(uniqid()), 0, 6);
+        $pieces = explode(' ', microtime(false));
+        return $pieces[1].substr($pieces[0], 2, 3) . "-" . substr(md5(uniqid()), 0, 6);
     }
 }
