@@ -292,6 +292,19 @@ class BaseDirectory
     }
 
 
+    /**
+     * builds DB indexes specific to this directory
+     */
+    public function bringUpToDate() {
+        // parent::bringUpToDate();
+
+        // build indexes, etc
+        // $this->getCollection()->ensureIndex(['primaryUser' => 1], ['unique' => true]);
+
+        return;
+    }
+
+
     ////////////////////////////////////////////////////////////////////////
 
     protected function newModel($data) {
@@ -340,16 +353,6 @@ class BaseDirectory
         return new MongoCollection($this->mongodb, $collection_name);
     }
 
-
-
-    protected function bringUpToDate() {
-        // parent::bringUpToDate();
-
-        // build indexes, etc
-        // $this->getCollection()->ensureIndex(['primaryUser' => 1], ['unique' => true]);
-
-        return;
-    }
 
 
     protected function extractID($item_or_id) {
